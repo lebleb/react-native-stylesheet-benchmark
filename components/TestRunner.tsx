@@ -1,7 +1,7 @@
 import React, {Profiler, ProfilerOnRenderCallback, useRef, useState} from "react";
 import {StyleSheet, Text, View} from "react-native";
 import {MAX_TEST_ATTEMPTS} from "@/config";
-import {RenderTimer} from "@/components/Sandbox";
+import {RenderTimer} from "@/components/MeasureRenderTime";
 
 export const TestRunner = ({name, testComponent, limit, onDone}: {
     name: string;
