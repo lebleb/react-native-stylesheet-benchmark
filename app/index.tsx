@@ -10,6 +10,7 @@ import {ReStyle} from "@/test/restyle";
 import {EmotionStyle} from "@/test/emotion";
 import chroma from 'chroma-js'
 import {LIMIT, MAX_TEST_ATTEMPTS, TEST_TYPE} from "@/config";
+import {GluestackStyle} from "@/test/gluestack";
 
 enum PROGRESS_STATE {
     Requested, // Loading
@@ -28,6 +29,8 @@ const getComponent = (value: TEST_TYPE): React.JSXElementConstructor<{ limit: nu
             return StyledComponents
         case TEST_TYPE.NATIVE_WIND:
             return NativeWind
+        case TEST_TYPE.GLUESTACK:
+            return GluestackStyle
         default:
             return null;
     }
@@ -84,7 +87,7 @@ export default function Home() {
                 tableHead: ['Test', 'Average (ms)', 'Slower'],
                 tableData: data.map(item => {
                     const slower = ((Number(item[1]) / Number(data[0][1]) * 100) - 100).toFixed(0) + '%'
-                    return [item[0], Number(item[1]).toFixed(2), slower]
+                    return [item[0], Number(item[1]).toFixed(0), slower]
                 })
             }
             return (

@@ -3,6 +3,7 @@ import {useFonts} from 'expo-font';
 import {Stack} from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import {useEffect} from 'react';
+import {StyledProvider} from "@gluestack-style/react"
 
 import {ThemeProvider as ThemeProviderStyledComponents} from "styled-components/native";
 import {ThemeProvider as ThemeProviderShopify} from '@shopify/restyle';
@@ -12,6 +13,8 @@ import {ThemeProvider as ThemeProviderEmotion} from '@emotion/react'
 import restyleTheme from "@/test/configs/restyle";
 import emotionTheme from "@/test/configs/emotion";
 import styledComponentsTheme from "@/test/configs/styled-components";
+import {config} from "@/gluestack-style.config"
+
 
 export {
     // Catch any errors thrown by the Layout component.
@@ -43,12 +46,14 @@ export default function RootLayout() {
     }
 
     return (
-        <ThemeProviderEmotion theme={emotionTheme}>
-            <ThemeProviderShopify theme={restyleTheme}>
-                <ThemeProviderStyledComponents theme={styledComponentsTheme}>
-                    <Stack/>
-                </ThemeProviderStyledComponents>
-            </ThemeProviderShopify>
-        </ThemeProviderEmotion>
+        <StyledProvider config={config}>
+            <ThemeProviderEmotion theme={emotionTheme}>
+                <ThemeProviderShopify theme={restyleTheme}>
+                    <ThemeProviderStyledComponents theme={styledComponentsTheme}>
+                        <Stack/>
+                    </ThemeProviderStyledComponents>
+                </ThemeProviderShopify>
+            </ThemeProviderEmotion>
+        </StyledProvider>
     );
 }
