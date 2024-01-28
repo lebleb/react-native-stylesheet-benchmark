@@ -16,7 +16,7 @@ const Text = styled.Text`
     }};
 `;
 
-export const EmotionStyle = ({limit}: TestProps) => {
+export const Emotion = ({limit}: TestProps) => {
     return times(limit, (i) => (<Text key={i}>Lorem Ipsum {i}</Text>))
 }
 

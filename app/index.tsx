@@ -1,28 +1,29 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 
 import React, {useEffect, useRef, useState} from "react";
-import {StyledComponents} from "@/test/styled-components";
-import {NativeStyle} from "@/test/native-style";
-import {NativeWind} from "@/test/nativewind-style";
-import {Row, Table} from 'react-native-table-component';
-import {TestRunner} from "@/components/TestRunner";
-import {ReStyle} from "@/test/restyle";
-import {EmotionStyle} from "@/test/emotion";
 import chroma from 'chroma-js'
-import {LIMIT, MAX_TEST_ATTEMPTS, TEST_TYPE} from "@/config";
+import {StyledComponents} from "@/test/styled-components";
+import {Native} from "@/test/native";
+import {NativeWind} from "@/test/nativewind";
+import {ReStyle} from "@/test/restyle";
+import {Emotion} from "@/test/emotion";
 import {GluestackStyle} from "@/test/gluestack";
+import {TestRunner} from "@/components/TestRunner";
+import {Row, Table} from 'react-native-table-component';
+import {LIMIT, MAX_TEST_ATTEMPTS, TEST_TYPE} from "@/config";
 
 enum PROGRESS_STATE {
     Requested, // Loading
     InProgress, // test is running
     Finished // Testing was finished and show results
 }
+
 const getComponent = (value: TEST_TYPE): React.JSXElementConstructor<{ limit: number }> | null => {
     switch (value) {
         case TEST_TYPE["EMOTION"]:
-            return EmotionStyle
+            return Emotion
         case TEST_TYPE["NATIVE_STYLE"]:
-            return NativeStyle
+            return Native
         case TEST_TYPE["RESTYLE"]:
             return ReStyle
         case TEST_TYPE["STYLED_COMPONENTS"]:
@@ -92,10 +93,12 @@ export default function Home() {
             }
             return (
                 <ScrollView style={styles.wrapper}>
-                    <Text style={styles.resultTitleText}>Test progress: Result ({MAX_TEST_ATTEMPTS} render x {LIMIT} samples for each)</Text>
+                    <Text style={styles.resultTitleText}>Test progress: Result ({MAX_TEST_ATTEMPTS} render
+                        x {LIMIT} samples for each)</Text>
                     <View>
                         <Table borderStyle={styles.tableBorderStyle}>
-                            <Row data={tableData.tableHead} style={styles.tableHeadRow} textStyle={styles.tableHeadText}/>
+                            <Row data={tableData.tableHead} style={styles.tableHeadRow}
+                                 textStyle={styles.tableHeadText}/>
                             {tableData.tableData.map((data, index) => (
                                 <Row data={data}
                                      style={{backgroundColor: colorTemperature[index]}}

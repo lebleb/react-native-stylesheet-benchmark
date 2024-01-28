@@ -10,9 +10,9 @@ import {ThemeProvider as ThemeProviderShopify} from '@shopify/restyle';
 import {ThemeProvider as ThemeProviderEmotion} from '@emotion/react'
 
 
-import restyleTheme from "@/test/configs/restyle";
-import emotionTheme from "@/test/configs/emotion";
-import styledComponentsTheme from "@/test/configs/styled-components";
+import restyleTheme from "@/test/restyle.config";
+import emotionTheme from "@/test/emotion.config";
+import styledComponentsTheme from "@/test/styled-components.config";
 import {config} from "@/gluestack-style.config"
 
 

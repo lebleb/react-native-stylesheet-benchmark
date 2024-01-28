@@ -1,6 +1,6 @@
 import {times} from "@/utility/times";
 import {createText} from '@shopify/restyle';
-import {Theme} from '@/test/configs/restyle';
+import {Theme} from '@/test/restyle.config';
 import {View} from "react-native";
 import {TestProps} from "@/test/types";
 

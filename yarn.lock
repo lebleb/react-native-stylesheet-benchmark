@@ -10406,7 +10406,7 @@ __metadata:
     react-native: "npm:0.73.2"
     react-native-safe-area-context: "npm:4.8.2"
     react-native-screens: "npm:~3.29.0"
-    react-native-svg: "npm:13.4.0"
+    react-native-svg: "npm:14.1.0"
     react-native-table-component: "npm:1.2.2"
     react-native-web: "npm:~0.19.6"
     react-test-renderer: "npm:18.2.0"
@@ -10416,16 +10416,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-svg@npm:13.4.0":
-  version: 13.4.0
-  resolution: "react-native-svg@npm:13.4.0"
+"react-native-svg@npm:14.1.0":
+  version: 14.1.0
+  resolution: "react-native-svg@npm:14.1.0"
   dependencies:
     css-select: "npm:^5.1.0"
     css-tree: "npm:^1.1.3"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 66b911bbe18c9b362f60e3487e65864d81526e55caec00921516956017bb1c7085432a10e330074bb094089d6989587ef5fc67c0637d9788b1db8734f0af3b05
+  checksum: 952d666471c1e849de1ca1f7c590dcbeba270fb62fb5afa707eac21da9d39f48ea21049dbaabf3db7078712c6236803e7143b9d9a30529bc6754f8d5f107d6ac
   languageName: node
   linkType: hard
 
