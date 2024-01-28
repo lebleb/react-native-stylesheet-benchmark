@@ -89,7 +89,7 @@ export default function Home() {
             }
             return (
                 <ScrollView style={styles.wrapper}>
-                    <Text style={styles.resultTitleText}>Test progress: Result ({MAX_TEST_ATTEMPTS} rerender x {LIMIT} samples for each)</Text>
+                    <Text style={styles.resultTitleText}>Test progress: Result ({MAX_TEST_ATTEMPTS} render x {LIMIT} samples for each)</Text>
                     <View>
                         <Table borderStyle={styles.tableBorderStyle}>
                             <Row data={tableData.tableHead} style={styles.tableHeadRow} textStyle={styles.tableHeadText}/>
