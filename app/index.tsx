@@ -11,6 +11,7 @@ import {GluestackStyle} from "@/test/gluestack";
 import {TestRunner} from "@/components/TestRunner";
 import {Row, Table} from 'react-native-table-component';
 import {LIMIT, MAX_TEST_ATTEMPTS, TEST_TYPE} from "@/config";
+import {Twrnc} from "@/test/twrnc";
 
 enum PROGRESS_STATE {
     Requested, // Loading
@@ -32,6 +33,8 @@ const getComponent = (value: TEST_TYPE): React.JSXElementConstructor<{ limit: nu
             return NativeWind
         case TEST_TYPE.GLUESTACK:
             return GluestackStyle
+        case TEST_TYPE.TWRNC:
+            return Twrnc
         default:
             return null;
     }
@@ -85,10 +88,10 @@ export default function Home() {
                 });
 
             const tableData = {
-                tableHead: ['Test', 'Average (ms)', 'Slower'],
+                tableHead: ['Test', 'Average (ms)', 'Slowdown (%)'],
                 tableData: data.map(item => {
-                    const slower = ((Number(item[1]) / Number(data[0][1]) * 100) - 100).toFixed(0) + '%'
-                    return [item[0], Number(item[1]).toFixed(0), slower]
+                    const slowdown = ((Number(item[1]) / Number(data[0][1]) * 100) - 100).toFixed(0) + '%'
+                    return [item[0], Number(item[1]).toFixed(0), slowdown]
                 })
             }
             return (
