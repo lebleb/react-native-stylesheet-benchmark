@@ -15,6 +15,7 @@ import emotionTheme from "@/test/emotion.config";
 import styledComponentsTheme from "@/test/styled-components.config";
 import {config} from "@/gluestack-style.config"
 
+import '@/test/unistyle.config'
 
 export {
     // Catch any errors thrown by the Layout component.
