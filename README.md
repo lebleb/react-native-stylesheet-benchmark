@@ -20,12 +20,13 @@ yarn ios
 
 | Test                | Average | % Slowdown |
 |---------------------|---------|------------|
-| Native StyleSheet   | 366     | 0          |
-| Styled Component v6 | 415     | 13%        |
-| Restyle (shopify)   | 419     | 14%        |
-| Emotion             | 435     | 19%        |
-| GlueStack           | 500     | 37%        |
-| NativeWind          | 517     | 41%        |
+| Twrnc               | 364     | 0          |
+| Native StyleSheet   | 368     | 1%         |
+| Styled Component v6 | 413     | 14%        |
+| Restyle (shopify)   | 420     | 16%        |
+| Emotion             | 440     | 21%        |
+| GlueStack           | 493     | 36%        |
+| NativeWind          | 510     | 40%        |
 
 
 ![img.png](./docs/output.png)

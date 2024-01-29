@@ -88,10 +88,10 @@ export default function Home() {
                 });
 
             const tableData = {
-                tableHead: ['Test', 'Average (ms)', 'Slower'],
+                tableHead: ['Test', 'Average (ms)', 'Slowdown (%)'],
                 tableData: data.map(item => {
-                    const slower = ((Number(item[1]) / Number(data[0][1]) * 100) - 100).toFixed(0) + '%'
-                    return [item[0], Number(item[1]).toFixed(0), slower]
+                    const slowdown = ((Number(item[1]) / Number(data[0][1]) * 100) - 100).toFixed(0) + '%'
+                    return [item[0], Number(item[1]).toFixed(0), slowdown]
                 })
             }
             return (
