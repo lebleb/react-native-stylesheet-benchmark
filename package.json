@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "ios:prod": "expo start --ios --no-dev --minify",
     "web": "expo start --web",
     "test": "jest --watchAll"
@@ -37,6 +37,7 @@
     "react-native-screens": "~3.29.0",
     "react-native-svg": "14.1.0",
     "react-native-table-component": "1.2.2",
+    "react-native-unistyles": "^2.2.0",
     "react-native-web": "~0.19.6",
     "styled-components": "6.0.8",
     "twrnc": "^3.6.8"

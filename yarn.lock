@@ -10408,6 +10408,7 @@ __metadata:
     react-native-screens: "npm:~3.29.0"
     react-native-svg: "npm:14.1.0"
     react-native-table-component: "npm:1.2.2"
+    react-native-unistyles: "npm:^2.2.0"
     react-native-web: "npm:~0.19.6"
     react-test-renderer: "npm:18.2.0"
     styled-components: "npm:6.0.8"
@@ -10434,6 +10435,24 @@ __metadata:
   version: 1.2.2
   resolution: "react-native-table-component@npm:1.2.2"
   checksum: 716fba970ede3f9d0b05dd1106e09e39824c208bdfe36b3ef5fe7ed0393be6069bfa641395db391c1db56c1bf49521c414095b0b72543a3a90702c0d510fb4d7
+  languageName: node
+  linkType: hard
+
+"react-native-unistyles@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "react-native-unistyles@npm:2.2.0"
+  peerDependencies:
+    "@react-native/normalize-colors": "*"
+    react: "*"
+    react-native: "*"
+    react-native-macos: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native-macos:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 8c9c15b949f3cc60218f126415496ff8ea6df555bdc0b997f54143265cc88b7d0263474b6b6bbcf222f37a0cab4f6dc35af29298089458d4c527b6ca9c794804
   languageName: node
   linkType: hard
 
