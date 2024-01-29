@@ -12,6 +12,7 @@ import {TestRunner} from "@/components/TestRunner";
 import {Row, Table} from 'react-native-table-component';
 import {LIMIT, MAX_TEST_ATTEMPTS, TEST_TYPE} from "@/config";
 import {Twrnc} from "@/test/twrnc";
+import {UniStyle} from "@/test/unistyle";
 
 enum PROGRESS_STATE {
     Requested, // Loading
@@ -35,6 +36,8 @@ const getComponent = (value: TEST_TYPE): React.JSXElementConstructor<{ limit: nu
             return GluestackStyle
         case TEST_TYPE.TWRNC:
             return Twrnc
+        case TEST_TYPE.UNISTYLE:
+            return UniStyle
         default:
             return null;
     }
